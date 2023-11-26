@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.header-main {
+    margin-top: 10px;
+}
+
+span {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.header-search-input {
+    border: none;
+}
+
+.header-search-btn {
+    border: none;
+}
+
+.flex {
+    display: flex;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.actions-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.main-navigation {
+    width: fit-content;
+}
+
+@media (max-width: 1150px) {
+    .header-actions-col {
+        width: 100%!important;
+    }
+}
+
+@media (max-width: 991px) {
+    .header-main {
+        margin-top: 10px;
+    }
+
+
+}
+
+@media (max-width: 575px) {
+    .header-main {
+        margin-top: 10px;
+    }
+
+    .header-search {
+        margin: unset;
+    }
+
+    .header-search-input {
+        right: 0px;
+        width: fit-content;
+    }
+
+    .header-search-col {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 450px) {
+    .header-search-col {
+        position: absolute;
+        top: 110px;
+        right: 23px;
+    }
+}
