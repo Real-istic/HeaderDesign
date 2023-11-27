@@ -30,10 +30,22 @@
 							{% endblock %}
 						</div>
 					{% endblock %}
+
 					<div class="actions-wrapper">
 
+						{% block layout_header_search_toggle %}
+							<div class="col-auto d-sm-none">
+								<div class="search-toggle">
+									<button class="btn header-actions-btn search-toggle-btn js-search-toggle-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#searchCollapse" aria-expanded="false" aria-controls="searchCollapse" aria-label="{{ "header.searchButton"|trans|striptags }}">
+										<img src="{{ asset('bundles/headerdesign/glass.svg', 'asset') }}">
+									</button>
+								</div>
+							</div>
+						{% endblock %}
+
+
 						{% block layout_header_search %}
-							<div class="col-12 order-2 col-sm order-sm-1 header-search-col">
+							<div class="col-12 col-sm header-search-col">
 								<div class="row">
 									<div class="col-sm-auto d-none d-sm-block d-lg-none"></div>
 									<div class="col">
@@ -43,18 +55,10 @@
 							</div>
 						{% endblock %}
 
-						{% block layout_header_search_toggle %}
-							<div class="col-auto d-sm-none">
-								<div class="search-toggle">
-									<button class="btn header-actions-btn search-toggle-btn js-search-toggle-btn collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#searchCollapse" aria-expanded="false" aria-controls="searchCollapse" aria-label="{{ "header.searchButton"|trans|striptags }}">
-										{% sw_icon 'search' %}
-									</button>
-								</div>
-							</div>
-						{% endblock %}
-
-
 						{% block layout_header_actions_account %}
+							<a class="heart-icon" href="">
+								<img src="{{ asset('bundles/headerdesign/heart.svg', 'asset') }}">
+							</a>
 							<div class="col-auto">
 								<div class="account-menu">
 									{% sw_include '@Storefront/storefront/layout/header/actions/account-widget.html.twig' %}
@@ -71,6 +75,7 @@
 								</div>
 							</div>
 						{% endblock %}
+
 					</div>
 				</div>
 			{% endblock %}

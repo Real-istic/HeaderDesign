@@ -17,6 +17,10 @@ span {
     border: none;
 }
 
+.nav-main-toggle {
+    display: none;
+}
+
 .flex {
     display: flex;
 }
@@ -31,16 +35,28 @@ span {
 
 .actions-wrapper {
     display: flex;
-    flex-direction: row-reverse;
+    // flex-direction: row-reverse;
 }
 
 .main-navigation {
     width: fit-content;
 }
 
+.header-cart-icon {
+    position: relative;
+}
+
+.nav-main-toggle-btn {
+    padding-top: 3px;
+}
+
+.heart-icon {
+    padding: 10px;
+}
+
 @media (max-width: 1150px) {
     .header-actions-col {
-        width: 100%!important;
+        width: 100% !important;
     }
 }
 
@@ -49,7 +65,9 @@ span {
         margin-top: 10px;
     }
 
-
+    .nav-main-toggle {
+        display: block;
+    }
 }
 
 @media (max-width: 575px) {
@@ -69,12 +87,16 @@ span {
     .header-search-col {
         width: fit-content;
     }
-}
 
-@media (max-width: 450px) {
+    .header-search-btn {
+        display: none;
+    }
+
     .header-search-col {
         position: absolute;
         top: 110px;
         right: 23px;
     }
 }
+
+@media (max-width: 450px) {}
