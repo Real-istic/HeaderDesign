@@ -11,6 +11,10 @@ span {
 
 .header-search-input {
     border: none;
+    &:focus {
+        box-shadow: none;
+        border-bottom: 1px solid black;
+    }
 }
 
 .header-search-btn {
